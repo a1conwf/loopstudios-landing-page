@@ -1,0 +1,125 @@
+@import "../../sass/base";
+
+.creations {
+	margin-bottom: 96px;
+
+	&__title {
+		text-align: center;
+		margin-bottom: 48px;
+	}
+
+	&__grid.desk {
+		display: none;
+	}
+
+	.creation {
+		display: flex;
+		min-height: 120px;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+		transition: opacity 0.3s ease-out;
+
+		&:hover {
+			opacity: 0.5;
+			cursor: pointer;
+		}
+
+		&__title {
+			max-width: 150px;
+			padding: 0 0 20px 20px;
+			align-self: flex-end;
+			font-family: $josefinSans;
+			font-weight: 300;
+			text-transform: uppercase;
+			font-size: 24px;
+			line-height: 24px;
+			color: $white;
+		}
+	}
+
+	&__grid.mob {
+		display: grid;
+		grid-gap: 24px;
+		margin-bottom: 34px;
+	}
+
+	.btn {
+		@include flex(center, center);
+		margin: 0 auto;
+
+		&.desk {
+			display: none;
+		}
+	}
+}
+
+@media screen and (min-width: 576px) {
+	.creations {
+		&__grid.mob {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+}
+
+@media screen and (min-width: 992px) {
+	.creations {
+		margin-bottom: 184px;
+
+		&__head {
+			max-width: 830px;
+			@include flex(space-between, flex-start);
+		}
+
+		&__title {
+			text-align: left;
+			margin-bottom: 80px;
+		}
+
+		&__grid.mob {
+			display: none;
+		}
+
+		&__grid.desk {
+			display: grid;
+			grid-gap: 30px;
+			grid-template-columns: repeat(3, 256px);
+		}
+
+		.creation {
+			width: 256px;
+			min-height: 450px;
+
+			&__title {
+				max-width: 210px;
+				padding: 0 0 32px 40px;
+				font-size: 32px;
+				line-height: 32px;
+			}
+		}
+
+		.btn {
+			margin: 0;
+
+			&.desk {
+				display: block;
+			}
+
+			&.mob {
+				display: none;
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	.creations {
+		&__head {
+			max-width: 1110px;
+		}
+
+		&__grid.desk {
+			grid-template-columns: repeat(4, 256px);
+		}
+	}
+}

@@ -1,0 +1,50 @@
+@import "./base";
+
+//Buttons
+.btn {
+	width: 157px;
+	min-height: 42px;
+	padding: 13px 0;
+	font-family: $alata;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 14px;
+	letter-spacing: 5px;
+	text-transform: uppercase;
+	color: $black;
+	border: 1px solid $black;
+	transition: all 0.3s ease-out;
+
+	&:hover {
+		background-color: $black;
+		color: $white;
+	}
+}
+
+//List items
+li a {
+	position: relative;
+	font-size: 15px;
+	line-height: 25px;
+	color: $white;
+}
+
+//Hover effect lists with hover class
+ul.hover li {
+	&:hover {
+		cursor: pointer;
+	}
+
+	&::after {
+		content: "";
+		display: block;
+		width: 0;
+		height: 2px;
+		background-color: $white;
+		transition: width 0.3s;
+	}
+
+	&:hover::after {
+		width: 100%;
+	}
+}

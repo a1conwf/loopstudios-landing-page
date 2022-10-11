@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap");
+
+//Resets
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+ol,
+ul {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+button {
+	border: none;
+	outline: none;
+	background-color: transparent;
+	cursor: pointer;
+}
+
+//Variables
+
+//Colors
+$black: #000;
+$white: #fff;
+
+//Fonts
+$josefinSans: "Josefin Sans", sans-serif;
+$alata: "Alata", sans-serif;
+
+//Body
+body {
+	font-size: 15px;
+	font-family: $alata;
+	font-weight: 400;
+	line-height: 25px;
+	color: $black;
+}
+
+//Typography
+h1,
+h2 {
+	font-family: $josefinSans;
+	font-weight: 300;
+	text-transform: uppercase;
+}
+
+h1 {
+	font-size: 40px;
+	line-height: 38px;
+	color: $white;
+}
+
+h2 {
+	font-size: 32px;
+	line-height: 32px;
+	color: $black;
+}
+
+//Mixins
+@mixin flex($justify, $align) {
+	display: flex;
+	justify-content: $justify;
+	align-items: $align;
+}
+
+//Media Queries
+@media screen and (min-width: 992px) {
+	//Typography
+	h1 {
+		font-size: 72px;
+		line-height: 70px;
+	}
+
+	h2 {
+		font-size: 48px;
+		line-height: 48px;
+	}
+}

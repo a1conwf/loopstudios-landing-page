@@ -1,0 +1,117 @@
+@import "../../sass/base";
+@import "../../sass/components";
+@import "../../sass/layout";
+
+.header {
+	position: relative;
+	min-height: 650px;
+	background: url("../../assets/images/mobile/image-hero.jpg") no-repeat center;
+	background-size: 100% 100%;
+	margin-bottom: 96px;
+
+	&__nav {
+		padding: 40px 0 163px;
+		@include flex(space-between, center);
+
+		.logo img {
+			position: relative;
+			z-index: 999;
+			width: 144px;
+			height: 24px;
+		}
+
+		&-list {
+			display: none;
+		}
+
+		.hamburger {
+			position: relative;
+			z-index: 999;
+		}
+
+		&-mobile {
+			min-height: 650px;
+			width: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			@include flex(center, center);
+			text-align: center;
+			background-color: $black;
+
+			ul li {
+				display: flex;
+				flex-direction: column;
+
+				a {
+					font-family: $josefinSans;
+					font-weight: 300;
+					font-size: 24px;
+					line-height: 25px;
+					text-transform: uppercase;
+					margin-bottom: 24px;
+				}
+			}
+
+			ul li a:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	&__content {
+		padding: 26px 24px 24px;
+		border: 2px solid $white;
+
+		h1 {
+			max-width: 279px;
+		}
+	}
+}
+
+@media screen and (min-width: 576px) {
+	.header {
+		&__content {
+			max-width: 320px;
+		}
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.header {
+		background: url("../../assets/images/desktop/image-hero.jpg") no-repeat center;
+		background-size: 100% 100%;
+	}
+}
+
+@media screen and (min-width: 992px) {
+	.header {
+		margin-bottom: 160px;
+		&__nav {
+			padding: 64px 0 123px;
+
+			&-list {
+				@include flex(space-between, center);
+				gap: 32px;
+			}
+
+			.hamburger {
+				display: none;
+			}
+
+			.logo img {
+				width: 192px;
+				height: 32px;
+			}
+		}
+
+		&__content {
+			padding: 40px;
+			max-width: 650px;
+
+			h1 {
+				max-width: 570px;
+			}
+		}
+	}
+}
