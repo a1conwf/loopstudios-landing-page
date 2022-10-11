@@ -67,7 +67,6 @@
 		margin-bottom: 184px;
 
 		&__head {
-			max-width: 830px;
 			@include flex(space-between, flex-start);
 		}
 
@@ -83,12 +82,13 @@
 		&__grid.desk {
 			display: grid;
 			grid-gap: 30px;
-			grid-template-columns: repeat(3, 256px);
+			grid-template-columns: repeat(3, 1fr);
 		}
 
 		.creation {
-			width: 256px;
+			width: 100%;
 			min-height: 450px;
+			background-position: top;
 
 			&__title {
 				max-width: 210px;
@@ -114,12 +114,8 @@
 
 @media screen and (min-width: 1200px) {
 	.creations {
-		&__head {
-			max-width: 1110px;
-		}
-
 		&__grid.desk {
-			grid-template-columns: repeat(4, 256px);
+			grid-template-columns: repeat(4, 1fr);
 		}
 	}
 }
