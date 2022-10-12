@@ -19,8 +19,13 @@
 			margin-bottom: 32px;
 		}
 
-		li {
-			margin-bottom: 16px;
+		&-list {
+			max-width: 59px;
+			margin: 0 auto;
+
+			li {
+				margin-bottom: 16px;
+			}
 		}
 
 		& li:last-child {
@@ -63,6 +68,7 @@
 			}
 
 			&-list {
+				max-width: 100%;
 				display: flex;
 				gap: 32px;
 			}
